@@ -1,0 +1,254 @@
+
+-- Made by Dazai and Arthur
+
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local Btools = Instance.new("TextButton")
+local Float = Instance.new("TextButton")
+local Speed = Instance.new("TextButton")
+local InfJump = Instance.new("TextButton")
+local NoClip = Instance.new("TextButton")
+local WalkonAir = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local openmain = Instance.new("Frame")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(23, 15, 44)
+main.BorderColor3 = Color3.fromRGB(15, 12, 33)
+main.Position = UDim2.new(0.467669159, 0, 0.0850393698, 0)
+main.Size = UDim2.new(0, 353, 0, 289)
+main.Visible = false
+main.Active = true
+main.Draggable = true
+
+ImageLabel.Parent = main
+ImageLabel.BackgroundColor3 = Color3.fromRGB(23, 15, 44)
+ImageLabel.Position = UDim2.new(0, 0, 0.101464085, 0)
+ImageLabel.Size = UDim2.new(0, 353, 0, 259)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=8790969676"
+
+Btools.Name = "Btools"
+Btools.Parent = main
+Btools.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+Btools.BackgroundTransparency = 1.000
+Btools.Position = UDim2.new(-0.00258578127, 0, 0.168770939, 0)
+Btools.Size = UDim2.new(0, 96, 0, 40)
+Btools.Font = Enum.Font.SourceSans
+Btools.Text = "Btools"
+Btools.TextColor3 = Color3.fromRGB(0, 0, 0)
+Btools.TextSize = 30.000
+Btools.TextStrokeColor3 = Color3.fromRGB(85, 0, 127)
+Btools.TextStrokeTransparency = 0.000
+Btools.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
+end)
+
+Float.Name = "Float"
+Float.Parent = main
+Float.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+Float.BackgroundTransparency = 1.000
+Float.Position = UDim2.new(0.344852954, 0, 0.424978882, 0)
+Float.Size = UDim2.new(0, 96, 0, 40)
+Float.Font = Enum.Font.SourceSans
+Float.Text = "Float"
+Float.TextColor3 = Color3.fromRGB(0, 0, 0)
+Float.TextSize = 30.000
+Float.TextStrokeColor3 = Color3.fromRGB(85, 0, 127)
+Float.TextStrokeTransparency = 0.000
+Float.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Float%20Character.txt"))()
+end)
+Speed.Name = "Speed"
+Speed.Parent = main
+Speed.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+Speed.BackgroundTransparency = 1.000
+Speed.Position = UDim2.new(0.00849857926, 0, 0.626444757, 0)
+Speed.Size = UDim2.new(0, 88, 0, 40)
+Speed.Font = Enum.Font.SourceSans
+Speed.Text = "Speed"
+Speed.TextColor3 = Color3.fromRGB(0, 0, 0)
+Speed.TextSize = 30.000
+Speed.TextStrokeColor3 = Color3.fromRGB(85, 0, 127)
+Speed.TextStrokeTransparency = 0.000
+Speed.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed =250
+
+end)
+
+InfJump.Name = "Inf Jump"
+InfJump.Parent = main
+InfJump.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+InfJump.BackgroundTransparency = 1.000
+InfJump.Position = UDim2.new(0.658631563, 0, 0.591842592, 0)
+InfJump.Size = UDim2.new(0, 118, 0, 50)
+InfJump.Font = Enum.Font.SourceSans
+InfJump.Text = "Inf Jump"
+InfJump.TextColor3 = Color3.fromRGB(0, 0, 0)
+InfJump.TextSize = 30.000
+InfJump.TextStrokeColor3 = Color3.fromRGB(85, 0, 127)
+InfJump.TextStrokeTransparency = 0.000
+InfJump.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
+end)
+NoClip.Name = "NoClip"
+NoClip.Parent = main
+NoClip.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+NoClip.BackgroundTransparency = 1.000
+NoClip.Position = UDim2.new(0.377017617, 0, 0.168770939, 0)
+NoClip.Size = UDim2.new(0, 85, 0, 40)
+NoClip.Font = Enum.Font.SourceSans
+NoClip.Text = "NoClip"
+NoClip.TextColor3 = Color3.fromRGB(0, 0, 0)
+NoClip.TextSize = 30.000
+NoClip.TextStrokeColor3 = Color3.fromRGB(85, 0, 127)
+NoClip.TextStrokeTransparency = 0.000
+NoClip.MouseButton1Down:connect(function()
+
+
+
+
+
+
+	local StealthMode = true -- made by arthur
+
+	local Indicator
+
+	if not StealthMode then
+		local ScreenGui = Instance.new("ScreenGui", game.CoreGui)
+		print("NOCLIP: Press Q to Activate")
+		Indicator = Instance.new("TextLabel", ScreenGui)
+		Indicator.AnchorPoint = Vector2.new(0, 1)
+		Indicator.Position = UDim2.new(0, 0, 1, 0)
+		Indicator.Size = UDim2.new(0, 200, 0, 50)
+		Indicator.BackgroundTransparency = 1
+		Indicator.TextScaled = true
+		Indicator.TextStrokeTransparency = 0
+		Indicator.TextColor3 = Color3.new(0, 0, 0)
+		Indicator.TextStrokeColor3 = Color3.new(1, 1, 1)
+		Indicator.Text = "Noclip: Enabled"
+	end
+
+	local noclip = true
+	local player = game.Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+
+	local mouse = player:GetMouse()
+
+	mouse.KeyDown:Connect(function(key)
+		if key == "q" then
+			noclip = not noclip
+
+			if not StealthMode then
+				Indicator.Text = "Noclip: " .. (noclip and "Enabled" or "Disabled")
+			end
+		end
+	end)
+
+	while true do
+		player = game.Players.LocalPlayer
+		character = player.Character
+
+		if noclip then
+			for _, v in pairs(character:GetDescendants()) do
+				pcall(function()
+					if v:IsA("BasePart") then
+						v.CanCollide = false
+					end
+				end)
+			end
+		end
+
+		game:GetService("RunService").Stepped:wait()
+	end
+end)
+
+WalkonAir.Name = "Walk on Air"
+WalkonAir.Parent = main
+WalkonAir.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WalkonAir.BackgroundTransparency = 1.000
+WalkonAir.Position = UDim2.new(0.691539764, 0, 0.168084323, 0)
+WalkonAir.Size = UDim2.new(0, 107, 0, 41)
+WalkonAir.Font = Enum.Font.SourceSans
+WalkonAir.Text = "Walk On Air"
+WalkonAir.TextColor3 = Color3.fromRGB(0, 0, 0)
+WalkonAir.TextSize = 25.000
+WalkonAir.TextStrokeColor3 = Color3.fromRGB(85, 0, 127)
+WalkonAir.TextStrokeTransparency = 0.000
+WalkonAir.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/High%20Hips.txt"))()
+end)
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(28, 21, 55)
+TextLabel.BorderColor3 = Color3.fromRGB(22, 14, 42)
+TextLabel.Position = UDim2.new(0, 0, -0.00146582047, 0)
+TextLabel.Size = UDim2.new(0, 352, 0, 29)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "Made By  Dazai"
+TextLabel.TextColor3 = Color3.fromRGB(227, 191, 237)
+TextLabel.TextSize = 14.000
+
+TextLabel_2.Parent = main
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(28, 21, 55)
+TextLabel_2.Position = UDim2.new(0, 0, 0.824739158, 0)
+TextLabel_2.Size = UDim2.new(0, 352, 0, 50)
+TextLabel_2.Font = Enum.Font.RobotoMono
+TextLabel_2.Text = "V1 of Dazai Script"
+TextLabel_2.TextColor3 = Color3.fromRGB(218, 184, 229)
+TextLabel_2.TextSize = 40.000
+
+Close.Name = "Close"
+Close.Parent = main
+Close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderColor3 = Color3.fromRGB(23, 15, 44)
+Close.Position = UDim2.new(0.895064831, 0, -0.00146582047, 0)
+Close.Size = UDim2.new(0, 37, 0, 29)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(244, 0, 0)
+Close.TextSize = 30.000
+Close.MouseButton1Down:connect(function()
+	main.Visible = false
+	openmain.Visible = true
+end)
+
+openmain.Name = "openmain"
+openmain.Parent = ScreenGui
+openmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+openmain.Position = UDim2.new(0, 0, 0.500787377, 0)
+openmain.Size = UDim2.new(0, 100, 0, 34)
+
+ImageLabel_2.Parent = openmain
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.Position = UDim2.new(-0.00390987378, 0, 0, 0)
+ImageLabel_2.Size = UDim2.new(0, 100, 0, 60)
+ImageLabel_2.Image = "http://www.roblox.com/asset/?id=6795741786"
+
+Open.Name = "Open"
+Open.Parent = openmain
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open.BackgroundTransparency = 1.000
+Open.Size = UDim2.new(0, 100, 0, 34)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextSize = 30.000
+Open.TextStrokeTransparency = 0.000
+Open.MouseButton1Down:connect(function()
+	openmain.Visible = false
+	main.Visible = true
+end)
